@@ -11,7 +11,6 @@ def filter_by_state(list_of_dictionaries: list[dict[str, Any]], state: str = "EX
     """Функция сортировки данных по параметру "EXECUTED" в списке словарей"""
     return [t for t in list_of_dictionaries if t.get("state") == state]
 
-print(filter_by_state(list_of_dictionaries))
 
 def sort_by_date(list_of_dictionaries: list[dict[str, Any]], reverse_list: bool = True) -> list[dict[str, Any]]:
     """Функция принимает список и сортирует его по датам по убыванию"""
@@ -19,6 +18,3 @@ def sort_by_date(list_of_dictionaries: list[dict[str, Any]], reverse_list: bool 
     sorted_list = sorted(list_of_dictionaries,key=lambda x: x["date"], reverse = reverse_list)
 
     return sorted_list
-
-
-print(sort_by_date(list_of_dictionaries))
