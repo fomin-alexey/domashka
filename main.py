@@ -1,5 +1,5 @@
-from src.widget import get_date, mask_account_card
+from src.processing import filter_by_state, sort_by_date
 
 if __name__ == "__main__":
-    print(mask_account_card("MasterCard 7158300734726758"))
-    print(get_date("2024-03-11T02:26:18.671407"))
+    print (sort_by_date())
+    print (filter_by_state())
