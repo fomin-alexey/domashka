@@ -7,12 +7,12 @@ dictionary_list = [
     {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
 ]
 
-def filter_by_state(dictionary_list: list[dict[str]], state: str = "EXECUTED") -> List[Dict]:
+def filter_by_state(dictionary_list: list[dict], state: str = "EXECUTED") -> List[Dict]:
     """Функция сортировки данных по параметру "EXECUTED" в списке словарей"""
     return [every_dict for every_dict in dictionary_list if every_dict.get("state") == state]
 
 
-def sort_by_date(dictionary_list: list[dict[str]], reverse_list: bool = True) -> list[dict[str]]:
+def sort_by_date(dictionary_list: list[dict], reverse_list: bool = True) -> list[dict]:
     """Функция принимает список и сортирует его по датам по убыванию"""
 
     sorted_list = sorted(dictionary_list,key=lambda every_dict: every_dict["date"], reverse = reverse_list)
